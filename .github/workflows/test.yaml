@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - v*
+
+jobs:
+  run-action:
+    runs-on: ubuntu-latest
+    name: Run Check Dependencies Action
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Check Dependencies Action
+        uses: ./
+        with:
+          apiKey: ${{ secrets.WEBSITE_ORACLE_API_KEY }}
+          url: "https://cadmus-labs.github.io/"
+          maxDepth: 1
+          includeTypes: page,script,stylesheet
