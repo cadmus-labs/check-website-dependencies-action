@@ -12,7 +12,7 @@
 # © 2023 Cadmus Labs. All rights reserved.
 
 name: "Check Website Dependencies"
-description: "Action for analyzing dependencies of a Website"
+description: "Action for analyzing the dependencies (links, scripts, and stylesheets) of a Website"
 author: Cadmus Labs
 branding:
   icon: search

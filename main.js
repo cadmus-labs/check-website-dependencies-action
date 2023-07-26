@@ -56,6 +56,7 @@ try {
         (apiStatusCode - (apiStatusCode % 100)) / 100 === 2 &&
         urls !== undefined
       ) {
+        console.log();
         var failedDependencies = 0;
         for (var i = 0; i < urls.length; i++) {
           const url = urls[i].url;

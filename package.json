@@ -1,13 +1,13 @@
 {
-  "name": "website-oracle-action",
+  "name": "check-website-dependencies-action",
   "version": "1.0.0",
-  "description": "Actions for running analysis using Website Oracle",
+  "description": "Action for checking the dependencies of a Website",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cadmus-labs/website-oracle-action.git"
+    "url": "git+https://github.com/cadmus-labs/check-website-dependencies-action.git"
   },
   "keywords": [
     "github-action",
@@ -19,9 +19,9 @@
   "author": "Cadmus Labs",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/cadmus-labs/website-oracle-action/issues"
+    "url": "https://github.com/cadmus-labs/check-website-dependencies-action/issues"
   },
-  "homepage": "https://github.com/cadmus-labs/website-oracle-action#readme",
+  "homepage": "https://github.com/cadmus-labs/check-website-dependencies-action#readme",
   "dependencies": {
     "@actions/core": "1.10.0",
     "@actions/http-client": "2.1.0"
