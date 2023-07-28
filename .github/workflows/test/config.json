@@ -1,0 +1,11 @@
+{
+  "scrapeRules": [
+    {
+      "urlMatch": {
+        "value": " https://www.googletagmanager.com/gtag/js?id=.*",
+        "type": "regex"
+      },
+      "action": "ignore"
+    }
+  ]
+}

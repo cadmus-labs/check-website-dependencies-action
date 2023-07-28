@@ -19,17 +19,20 @@ branding:
   color: purple
 inputs:
   apiKey:
-    description: "API Key from Rapid API for Website Oracle"
+    description: API Key from Rapid API for Website Oracle
     required: true
   url:
-    description: "The URL of the website to analyze"
+    description: The URL of the website to analyze
     required: true
   maxDepth:
-    description: "The maximum depth of the dependency tree to analyze. This restricts the maximum number of steps taken from the starting URL during the crawl"
+    description: The maximum depth of the dependency tree to analyze. This restricts the maximum number of steps taken from the starting URL during the crawl
     default: "1"
   includeTypes:
-    description: "The dependency types that should be included in the dependency graph"
+    description: The dependency types that should be included in the dependency graph
     default: ""
+  config:
+    description: The path to the config JSON file, relative to the repository root
+    default: .github/actions/website-oracle.json
 runs:
   using: "node16"
   main: "./main.js"

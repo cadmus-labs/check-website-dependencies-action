@@ -15,6 +15,7 @@
 
 const core = require("@actions/core");
 const http = require("@actions/http-client");
+const fs = require("fs");
 
 const websiteOracleHost = "website-oracle.p.rapidapi.com";
 
@@ -28,6 +29,11 @@ try {
     .map((t) => t.trim())
     .filter((t) => t !== "");
 
+  const configFile = core.getInput("config");
+  var config = fs.existsSync(configFile)
+    ? JSON.parse(fs.readFileSync(configFile, { encoding: "utf8", flag: "r" }))
+    : {};
+
   const client = new http.HttpClient("website-oracle");
   const endpointUrl = "https://" + websiteOracleHost + "/dependencies";
   console.log("Sending request to Website Oracle (" + endpointUrl + ")");
@@ -38,6 +44,7 @@ try {
         url: url,
         maxDepth: maxDepth,
         includeTypes: includeTypes,
+        scrapeRules: config.scrapeRules,
       },
       {
         "X-RapidAPI-Key": apiKey,
