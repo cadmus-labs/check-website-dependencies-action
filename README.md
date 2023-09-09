@@ -1,4 +1,4 @@
-# Check Dependencies Action
+# Check Website Dependencies
 
 This action uses the website oracle to check the dependencies of a website. It will fail if any of the dependencies are broken so that you can detect them before end users are affected by them. This action currently supports the following dependency types.
 
@@ -13,7 +13,7 @@ Website Oracle can start at a page of your choice and scrape through your websit
 | Input          | Description                                                                                                           | Default Value                         |
 | -------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
 | `apiKey`       | [API Key for Website Oracle](https://rapidapi.com/cadmus-labs-cadmus-labs-admin/api/website-oracle/)                  | N/A (Required)                        |
-| `url`          | The URL where the dependency analysis should start                                                                    | N/A (Required)at                      |
+| `url`          | The URL where the dependency analysis should start                                                                    | N/A (Required)                        |
 | `maxDepth`     | The maximum number of times the dependencies should be fetched recursively (The maximum depth of the dependency tree) | `1`                                   |
 | `includeTypes` | The types of dependencies to analyze as a comma seperated list. It should be one of (`page`, `script`, `stylesheet`)  | All types                             |
 | `config`       | The path to the config JSON file, relative to the repository root                                                     | `.github/actions/website-oracle.json` |
